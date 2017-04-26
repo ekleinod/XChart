@@ -13,11 +13,11 @@
     <name>XChart</name>
     <description>The core XChart library</description>
 
-    <dependencies>
+    <!-- dependencies>
         <dependency>
             <groupId>de.erichseifert.vectorgraphics2d</groupId>
             <artifactId>VectorGraphics2D</artifactId>
         </dependency>
-    </dependencies>
+    </dependencies-->
 
 </project>
