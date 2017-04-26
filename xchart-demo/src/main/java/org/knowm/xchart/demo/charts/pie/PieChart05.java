@@ -54,7 +54,9 @@ public class PieChart05 implements ExampleChart<PieChart> {
     chart.getStyler().setPlotContentSize(.9);
     chart.getStyler().setDefaultSeriesRenderStyle(PieSeriesRenderStyle.Donut);
     chart.getStyler().setDecimalPattern("#");
+
     chart.getStyler().setSumVisible(true);
+    chart.getStyler().setSumFont(chart.getStyler().getSumFont().deriveFont(Float.valueOf(20)));
 
     // Series
     chart.addSeries("A", 22);

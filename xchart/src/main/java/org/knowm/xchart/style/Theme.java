@@ -137,8 +137,6 @@ public interface Theme extends SeriesMarkers, SeriesLines, SeriesColors {
 
   boolean isCircular();
 
-  boolean isSumVisible();
-
   double getStartAngleInDegrees();
 
   Font getPieFont();
@@ -150,6 +148,10 @@ public interface Theme extends SeriesMarkers, SeriesLines, SeriesColors {
   boolean isDrawAllAnnotations();
 
   double getDonutThickness();
+
+  boolean isSumVisible();
+
+  Font getSumFont();
 
   // Line, Scatter, Area Charts ///////////////////////////////
 

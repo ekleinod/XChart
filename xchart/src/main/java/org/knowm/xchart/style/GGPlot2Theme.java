@@ -343,12 +343,6 @@ public class GGPlot2Theme implements Theme {
   }
 
   @Override
-  public boolean isSumVisible() {
-
-  	return false;
-  }
-
-  @Override
   public double getStartAngleInDegrees() {
 
     return 0;
@@ -382,6 +376,18 @@ public class GGPlot2Theme implements Theme {
   public double getDonutThickness() {
 
     return .25;
+  }
+
+  @Override
+  public boolean isSumVisible() {
+
+  	return false;
+  }
+
+  @Override
+  public Font getSumFont() {
+
+    return new Font(Font.SANS_SERIF, Font.PLAIN, 12);
   }
 
   // Line, Scatter, Area Charts ///////////////////////////////
