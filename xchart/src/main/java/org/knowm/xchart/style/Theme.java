@@ -137,6 +137,8 @@ public interface Theme extends SeriesMarkers, SeriesLines, SeriesColors {
 
   boolean isCircular();
 
+  boolean isSumVisible();
+
   double getStartAngleInDegrees();
 
   Font getPieFont();

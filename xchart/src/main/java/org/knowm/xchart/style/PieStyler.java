@@ -31,6 +31,7 @@ public class PieStyler extends Styler {
   }
 
   private boolean isCircular;
+  private boolean isSumVisible;
   private double startAngleInDegrees;
   private double annotationDistance;
   private AnnotationType annotationType;
@@ -51,6 +52,7 @@ public class PieStyler extends Styler {
 
     this.chartPieSeriesRenderStyle = PieSeriesRenderStyle.Pie;
     this.isCircular = theme.isCircular();
+    this.isSumVisible = theme.isSumVisible();
     this.annotationDistance = theme.getAnnotationDistance();
     this.annotationType = theme.getAnnotationType();
     this.drawAllAnnotations = theme.isDrawAllAnnotations();
@@ -89,6 +91,22 @@ public class PieStyler extends Styler {
   public PieStyler setCircular(boolean isCircular) {
 
     this.isCircular = isCircular;
+    return this;
+  }
+
+  public boolean isSumVisible() {
+
+    return isSumVisible;
+  }
+
+  /**
+   * Sets whether or not the pie chart is forced to be circular. Otherwise it's shape is oval, matching the containing plot.
+   *
+   * @param isCircular
+   */
+  public PieStyler setSumVisible(boolean isSumVisible) {
+
+    this.isSumVisible = isSumVisible;
     return this;
   }
 

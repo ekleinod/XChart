@@ -343,6 +343,12 @@ public class XChartTheme implements Theme {
   }
 
   @Override
+  public boolean isSumVisible() {
+
+  	return false;
+  }
+
+  @Override
   public double getStartAngleInDegrees() {
 
     return 0;

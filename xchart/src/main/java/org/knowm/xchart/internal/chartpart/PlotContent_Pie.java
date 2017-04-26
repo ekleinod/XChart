@@ -92,6 +92,41 @@ public class PlotContent_Pie<ST extends Styler, S extends Series> extends PlotCo
       total += series.getValue().doubleValue();
     }
 
+    // draw total value if visible
+    if (pieStyler.isSumVisible()) {
+    	DecimalFormat totalDf = (pieStyler.getDecimalPattern() == null) ? df : new DecimalFormat(pieStyler.getDecimalPattern());
+
+    	String annotation = totalDf.format(total);
+
+        TextLayout textLayout = new TextLayout(annotation, pieStyler.getAnnotationsFont(), new FontRenderContext(null, true, false));
+        Rectangle2D annotationRectangle = textLayout.getBounds();
+
+        double xCenter = pieBounds.getX() + pieBounds.getWidth() / 2 - annotationRectangle.getWidth() / 2;
+        double yCenter = pieBounds.getY() + pieBounds.getHeight() / 2 + annotationRectangle.getHeight() / 2;
+
+        double xOffset = xCenter;
+        double yOffset = yCenter;
+
+        // get annotation width
+        Shape shape = textLayout.getOutline(null);
+        Rectangle2D annotationBounds = shape.getBounds2D();
+        double annotationWidth = annotationBounds.getWidth();
+        // System.out.println("annotationWidth= " + annotationWidth);
+        double annotationHeight = annotationBounds.getHeight();
+
+        g.setColor(pieStyler.getChartFontColor());
+        g.setFont(pieStyler.getAnnotationsFont());
+        AffineTransform orig = g.getTransform();
+        AffineTransform at = new AffineTransform();
+
+        // inside
+        at.translate(xOffset, yOffset);
+        g.transform(at);
+        g.fill(shape);
+        g.setTransform(orig);
+
+    }
+
     // draw pie slices
     // double curValue = 0.0;
     // double curValue = 0.0;

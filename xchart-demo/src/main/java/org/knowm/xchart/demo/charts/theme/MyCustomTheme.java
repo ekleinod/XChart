@@ -343,6 +343,12 @@ public class MyCustomTheme implements Theme {
   }
 
   @Override
+  public boolean isSumVisible() {
+
+  	return false;
+  }
+
+  @Override
   public double getStartAngleInDegrees() {
 
     return 0;
@@ -413,4 +419,5 @@ public class MyCustomTheme implements Theme {
 
     return new Font(Font.SANS_SERIF, Font.PLAIN, 12);
   }
+
 }
