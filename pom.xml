@@ -65,7 +65,7 @@
 		<downloadUrl>https://oss.sonatype.org/content/groups/public/org/knowm/xchart</downloadUrl>
 	</distributionManagement>
 
-	<dependencyManagement>
+	<!-- dependencyManagement>
 		<dependencies>
 			<dependency>
 				<groupId>de.erichseifert.vectorgraphics2d</groupId>
@@ -74,7 +74,7 @@
 				<optional>true</optional>
 			</dependency>
 		</dependencies>
-	</dependencyManagement>
+	</dependencyManagement-->
 
 	<dependencies>
 		<dependency>
@@ -90,6 +90,11 @@
 			<version>2.0M10</version>
 			<scope>test</scope>
 		</dependency>
+			<dependency>
+				<groupId>de.erichseifert.vectorgraphics2d</groupId>
+				<artifactId>VectorGraphics2D</artifactId>
+				<version>0.11</version>
+			</dependency>
 	</dependencies>
 
 	<profiles>
