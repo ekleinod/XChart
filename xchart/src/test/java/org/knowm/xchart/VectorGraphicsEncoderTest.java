@@ -47,8 +47,6 @@ public class VectorGraphicsEncoderTest {
 
 		}
 
-		VectorGraphicsEncoder.addFileExtension("test.txt", null);
-
 	}
 
 }
